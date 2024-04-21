@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import WebGL from 'three/addons/capabilities/WebGL.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
+import { CSS3DObject, CSS3DSprite, CSS3DRenderer } from './CSS3DRenderer.js';
 
 // To actually be able to display anything with three.js, we need three things: scene, camera and renderer, so that we can render the scene with camera.
 const scene = new THREE.Scene();
@@ -59,7 +60,6 @@ function animate( time ) {
 	controls.update();
 	renderer.render( scene, camera );
 }
-
 
 // resize window listener
 window.addEventListener('resize', function(){
